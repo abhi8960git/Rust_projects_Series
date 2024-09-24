@@ -1,16 +1,20 @@
 use std::{collections::btree_map::Values, fmt::format};
 
 use closures::test_closures;
+use match_::test_match;
 
 pub mod helpers;
 pub mod closures;
+pub mod match_;
 fn main() {
     println!("Hello, world!");
     // coercion();
     let Result = helpers::namehelpers::get_full_name("abhid", "shekd");
     println!("Hello from {0}", Result);
     // test_if();
-    test_closures();
+    // test_closures();
+    test_match();
+    
 }
 // type coercion type conversion
 // by default the rust var are immutable
