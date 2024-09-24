@@ -1,0 +1,8 @@
+thread 'main' panicked at src/main.rs:23:37:
+called `Result::unwrap()` on an `Err` value: ParseIntError { kind: InvalidDigit }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+std::io::stdin().read_line(myinput).unwrap();(its including new line character)
+
+solution :-
+let age:u8= myinput.replace("\n","").parse::<u8>().unwrap();

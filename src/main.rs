@@ -7,10 +7,24 @@ fn main() {
     // coercion();
     let Result = helpers::namehelpers::get_full_name("abhid", "shekd");
     println!("Hello from {0}", Result);
+    test_if();
 }
 // type coercion type conversion
 // by default the rust var are immutable
 
+
+fn test_if(){
+    let age_to_drive:u8 = 16u8;
+
+    println!("Enter te person's age: ");
+    let myinput :&mut String = &mut String::from("");
+    std::io::stdin().read_line(myinput).unwrap();
+    
+  let age:u8= myinput.replace("\n","").parse::<u8>().unwrap();
+    if(age >= age_to_drive){
+        println!("Issueing driver's license , because they are old enough");
+    }
+}
 
 fn coercion(){
     let x:f32 = 255.0;
