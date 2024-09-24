@@ -1,4 +1,4 @@
-use std::fmt::format;
+use std::{collections::btree_map::Values, fmt::format};
 
 pub mod helpers;
 
@@ -23,6 +23,19 @@ fn test_if(){
   let age:u8= myinput.replace("\n","").parse::<u8>().unwrap();
     if(age >= age_to_drive){
         println!("Issueing driver's license , because they are old enough");
+    }
+}
+
+fn test_for_loop(){
+    let ages:[i32;5]=[14,18,26,35,41];
+    let age_to_drive:i32 = 16i32;
+
+    for value in ages{
+        if value >= age_to_drive{
+            println!(
+                "you are old enough to drive"
+            )
+        }
     }
 }
 
