@@ -1,13 +1,16 @@
 use std::{collections::btree_map::Values, fmt::format};
 
-pub mod helpers;
+use closures::test_closures;
 
+pub mod helpers;
+pub mod closures;
 fn main() {
     println!("Hello, world!");
     // coercion();
     let Result = helpers::namehelpers::get_full_name("abhid", "shekd");
     println!("Hello from {0}", Result);
-    test_if();
+    // test_if();
+    test_closures();
 }
 // type coercion type conversion
 // by default the rust var are immutable
@@ -52,4 +55,6 @@ fn coercion(){
     let name:(&str, u8) = ("Happy", 4);
 
 }
+
+// anonmoys function and clousure in rust
 
