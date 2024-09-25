@@ -3,11 +3,13 @@ use std::{collections::btree_map::Values, fmt::format, result};
 use closures::test_closures;
 use match_::test_match;
 use option::{test_option_chartype, test_option_string, test_option_type};
+use structs::test_new_person;
 
 pub mod closures;
 pub mod helpers;
 pub mod match_;
 pub mod option;
+pub mod structs;
 fn main() {
     println!("Hello, world!");
     // coercion();
@@ -16,20 +18,22 @@ fn main() {
     // test_if();
     // test_closures();
     // test_match();
-    let result = test_option_type();
-    let result1 = test_option_string();
-    let char = test_option_chartype();
+    // let result = test_option_type();
+    // let result1 = test_option_string();
+    // let char = test_option_chartype();
 
-    println!("{}", result1.unwrap());
+    // println!("{}", result1.unwrap());
 
-    println!("{0}", result.unwrap());
+    // println!("{0}", result.unwrap());
 
-    if char.is_some() {
-        println!("User has selected a character type");
-        println!("{}", char.unwrap().to_string());
-    } else {
-        println!("character type is None");
-    }
+    // if char.is_some() {
+    //     println!("User has selected a character type");
+    //     println!("{}", char.unwrap().to_string());
+    // } else {
+    //     println!("character type is None");
+    // }
+
+    test_new_person();
 }
 // type coercion type conversion
 // by default the rust var are immutable
