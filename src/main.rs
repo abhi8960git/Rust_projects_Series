@@ -3,7 +3,7 @@ use std::{collections::btree_map::Values, fmt::format, result};
 use closures::test_closures;
 use match_::test_match;
 use option::{test_option_chartype, test_option_string, test_option_type};
-use structs::test_new_person;
+use structs::{new_method_vehicle};
 
 pub mod closures;
 pub mod helpers;
@@ -33,7 +33,8 @@ fn main() {
     //     println!("character type is None");
     // }
 
-    test_new_person();
+    // test_new_person();
+   new_method_vehicle();
 }
 // type coercion type conversion
 // by default the rust var are immutable
